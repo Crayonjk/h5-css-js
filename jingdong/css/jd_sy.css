@@ -1,0 +1,314 @@
+/*创建一些全局样式
+  1 所有的块级元素去margin padding
+  2 设置全局字体
+  3 a连接字体不继承body
+  4 ul ol去前缀
+  5 img与文本对齐方式
+*/
+body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dt, dd, dl {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 12px;
+    font-family: "微软雅黑", 宋体, 楷体;
+    color: #333333;
+}
+
+a {
+    color: #666666;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #f00;
+    text-decoration: underline;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+img {
+    vertical-align: bottom;
+
+}
+
+.lf {
+    float: left;
+}
+
+.rg {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+/*----------------------------end 全局样式--------------------------------------------------------*/
+/*设置页面适配宽度*/
+#header, #header_bottom, #nav, #banner, #main, #footer {
+    width: 1211px;
+    margin: auto;
+    border: 1px solid #000;
+}
+
+/* ----------------------------------------------------------------------------------   页头样式 header start*/
+/*                                    页头顶部  top*/
+#header_top {
+    background: #f7f7f7;
+}
+
+#header {
+    height: 31px;
+    border: none;
+    line-height: 31px;
+}
+
+#header > a > img {
+    vertical-align: 0px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+#header > a:hover img {
+    transform: rotate(720deg);
+    transition: 2s;
+}
+
+#header > ul {
+    float: right;
+}
+
+#header > ul > li {
+    float: left;
+}
+
+#header > ul > li > b {
+    border-left: 1px solid #dddddd;
+    margin: 0px 5px;
+}
+
+#header > ul > li:nth-child(5) i {
+    width: 24px;
+    height: 11px;
+    display: inline-block;
+    background: url("../img/header/vip.jpg") no-repeat;
+    margin-right: 6px;
+    vertical-align: -1px;
+}
+
+#header > ul > li:nth-child(7) i {
+    width: 24px;
+    height: 11px;
+    display: inline-block;
+    background: url("../img/header/dakehu.jpg") no-repeat;
+    margin-right: 9px;
+    vertical-align: -1px;
+}
+
+#header > ul > li:nth-child(9) i {
+    width: 13px;
+    height: 22px;
+    display: inline-block;
+    background: url("../img/header/iconlist_2.png") no-repeat -128px -360px;
+    margin-right: 6px;
+    vertical-align: -6px;
+}
+
+#header > ul > li:nth-child(9):hover i {
+    /*background: url("../img/header/iconlist_2.png")no-repeat -128px -360px;*/
+    background-position: -128px -399px;
+}
+
+#header > ul > li:nth-child(11) img {
+    vertical-align: 3px;
+
+}
+
+/*客户服务*/
+#header > ul > li:nth-child(11) > ul {
+    display: none;
+    position: absolute;
+    top: 31px;
+    background: #fff;
+    border: 1px solid black;
+    border-top: none;
+}
+#header > ul > li:nth-child(11) > ul li{
+    padding: 0px 6px;
+
+}
+
+#header > ul > li:nth-child(11):hover ul {
+    display: block;
+}
+
+#header > ul > li:nth-child(11):hover {
+    background-color: #fff;
+}
+
+#header > ul > li:last-child {
+    margin-right: 4px;
+}
+
+/*++++++++++++++++++++++++++++++ 页头底部  bottom 搜索栏*/
+#header_bottom {
+    border: none;
+}
+
+#header_bottom > img {
+    margin-top: 15px;
+    margin-right: 40px;
+}
+
+#header_bottom > div:nth-child(2) {
+    margin-top: 19px;
+    margin-bottom: 16px;
+}
+
+#header_bottom > div:nth-child(2) > form > div {
+
+    width: 506px;
+    height: 36px;
+    background-color: #e4393c;
+}
+
+#header_bottom > div:nth-child(2) > form > div > input {
+    outline: none;
+    border: none;
+    width: 415px;
+    height: 30px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 3px;
+}
+
+#header_bottom > div:nth-child(2) > form > div > button {
+    background: none;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    margin-left: 25px;
+}
+
+#header_bottom > div:nth-child(2) > p {
+    margin-top: 8px;
+}
+
+#header_bottom > div:nth-child(2) > p > a {
+    margin-right: 6px;
+}
+
+#header_bottom > .butt {
+    margin-top: 25px;
+}
+
+#header_bottom > .butt > button:first-child {
+    width: 106px;
+    height: 32px;
+    background: url("../img/header/jd.jpg") no-repeat;
+    outline: none;
+    border: none;
+    margin-left: 80px;
+}
+
+#header_bottom > .butt > button:last-child {
+    width: 126px;
+    height: 44px;
+    background: url("../img/header/gwc.jpg") no-repeat;
+    outline: none;
+    border: none;
+    margin-left: 10px;
+}
+
+/* ----------------------------------------------------------------------------------   页头样式 header end*/
+
+/* ----------------------------------------------------------------------------------   导航栏样式 nav start*/
+
+#nav {
+    background: #e64346;
+    border: none;
+}
+
+#nav > .falstp {
+    width: 210px;
+    height: 40px;
+    line-height: 40px;
+    background: #cd2a2c url("../img/header/jtr.jpg") no-repeat 190px 20px;
+    text-indent: 16px;
+    color: #fff;
+
+}
+
+#nav > .lastul li {
+    float: left;
+    padding-left: 26px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#nav > .lastul li:hover {
+    background: #cd2a2c;
+}
+
+#nav > .lastul li a {
+    color: #fff;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+/* ----------------------------------------------------------------------------------   导航栏样式 nav end*/
+
+/* ----------------------------------------------------------------------------------   轮播图样式 banner start*/
+/* ----------------------------------------------------------------------------------   轮播图样式 banner end*/
+
+/* ----------------------------------------------------------------------------------   主体样式 main start*/
+/* ----------------------------------------------------------------------------------   主体样式 main end*/
+
+/* ----------------------------------------------------------------------------------   页脚样式 footer start*/
+#footer {
+    border: none;
+}
+
+#footer > .footer_top > div {
+    width: 184.2px;
+    margin-left: 58px;
+}
+
+#footer > .footer_top > div > img {
+    margin-top: 3px;
+    margin-right: 6px;
+}
+
+#footer > .footer_top > div div h4 {
+    margin-bottom: 14px;
+}
+
+#footer > .footer_top > div > div ul li {
+    margin-bottom: 10px;
+}
+
+#footer > .footer_bottom {
+
+    text-align: center;
+}
+
+#footer > .footer_bottom > p:first-child {
+    margin: 16px 0px;
+}
+
+#footer > .footer_bottom > p:last-child {
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+#footer > .footer_bottom > p:last-child img {
+    margin: 0px 11px;
+}
+
+/* ----------------------------------------------------------------------------------   页脚样式 footer end*/
